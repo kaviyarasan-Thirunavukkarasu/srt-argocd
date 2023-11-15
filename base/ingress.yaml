@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: clusterissuer
+    nginx.ingress.kubernetes.io/cors-allow-headers: "cmfapikey, apikey, blobFileName, content-type"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+  name: srtappinfra-ingress
+  namespace: srtappinfra
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: devcluster.surgeonreview.net
+      http:
+        paths:
+          - path: /srtinfra/(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: srtinfrasvc
+                namespace: srtappinfra
+                port:
+                  number: 8000
+          - path: /srtapp(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: srtappsvc
+                namespace: srtappinfra
+                port:
+                  number: 3000
+  tls:
+    - hosts:
+        - devcluster.surgeonreview.net
+      secretName: tlssecret

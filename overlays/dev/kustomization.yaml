@@ -1,0 +1,16 @@
+namePrefix: dev-
+
+secretGenerator:
+  - name: secret
+    namespace: srtappinfra
+    env: secret.properties
+
+resources:
+  - ../../base
+
+patchesJson6902:
+  - target:
+      version: v1 # apiVersion
+      kind: Deployment
+      name: srtappinfradep
+    path: dep-patch.yaml

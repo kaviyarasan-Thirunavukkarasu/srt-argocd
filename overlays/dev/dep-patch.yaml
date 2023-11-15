@@ -1,0 +1,5 @@
+- op: add #action
+  path: "/spec/template/spec/containers/0/envFrom" #resource we want to change
+  value: #value we want to use for patching
+    - secretRef:
+        name: secret
