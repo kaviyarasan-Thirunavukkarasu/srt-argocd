@@ -5,7 +5,7 @@ metadata:
   namespace: srtappinfra
 spec:
   selector:
-    app: srtinfragin # Should match the labels in your Deployment
+    app: srtinfraginapp # Should match the labels in your Deployment
   ports:
     - protocol: TCP
       port: 3000 # The port on which your service will be accessible
