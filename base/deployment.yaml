@@ -16,6 +16,6 @@ spec:
       serviceAccountName: config-reader-sa
       containers:
         - name: srtinfraapicontainer
-          image: jenkinspipeline12/srtinfra:v2
+          image: jenkinspipeline12/srtinfra:v3
           ports:
             - containerPort: 8080 # Set the port your application listens on
