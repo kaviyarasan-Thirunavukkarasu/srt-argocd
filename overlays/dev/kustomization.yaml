@@ -21,4 +21,4 @@ images:
     newTag: "v4"
   - name: jenkinspipeline12/srtappgateway
     newName: jenkinspipeline12/srtappgateway
-    newTag: "v5"
+    newTag: 9
