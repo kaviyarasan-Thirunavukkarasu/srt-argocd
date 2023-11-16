@@ -14,3 +14,11 @@ patchesJson6902:
       kind: Deployment
       name: srtappinfradep
     path: dep-patch.yaml
+
+images:
+  - name: jenkinspipeline12/srtinfra
+    newName: jenkinspipeline12/srtinfra
+    newTag: "v4"
+  - name: jenkinspipeline12/srtappgateway
+    newName: jenkinspipeline12/srtappgateway
+    newTag: "v5"
