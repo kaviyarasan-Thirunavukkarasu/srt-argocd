@@ -19,6 +19,6 @@ images:
   - name: jenkinspipeline12/srtinfra
     newName: jenkinspipeline12/srtinfra
     newTag: "v4"
-  - name: jenkinspipeline12/srtappgateway
-    newName: jenkinspipeline12/srtappgateway
+  - name: srtserver.azurecr.io/srtappgateway
+    newName: srtserver.azurecr.io/srtappgateway
     newTag: "integration_10_dev"

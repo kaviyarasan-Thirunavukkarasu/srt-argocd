@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: srtappcontainer
-          image: jenkinspipeline12/srtappgateway:v5
+          image: srtserver.azurecr.io/srtappgateway:integration_10_dev
           ports:
             - containerPort: 3000 # Set the port your application listens on
