@@ -21,4 +21,4 @@ images:
     newTag: "v4"
   - name: srtserver.azurecr.io/srtappgateway
     newName: srtserver.azurecr.io/srtappgateway
-    newTag: "integration_16_dev"
+    newTag: "integration_10_dev"
