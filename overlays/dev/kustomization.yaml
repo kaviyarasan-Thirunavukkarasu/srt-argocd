@@ -1,9 +1,5 @@
 namePrefix: dev-
 
-secretGenerator:
-  - name: secret
-    namespace: srtappinfra
-    env: secret.properties
 resources:
   - ../../base
 
@@ -13,6 +9,11 @@ patchesJson6902:
       kind: Deployment
       name: srtappinfradep
     path: dep-patch.yaml
+  - target:
+      version: v1beta1 # apiVersion
+      kind: ExternalSecret
+      name: dev-azure-kv-713-test
+    path: externalsecrets-patch.yaml
 
 images:
   - name: jenkinspipeline12/srtinfra
