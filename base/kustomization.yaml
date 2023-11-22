@@ -1,8 +1,8 @@
 resources:
   - namespace.yaml
   - serviceaccount.yaml
-  - clustersecretstore.yaml
-  - externalsecrets.yaml
+  # - clustersecretstore.yaml
+  # - externalsecrets.yaml
   - clusterrolebinding.yaml
   - secret.yaml
   - deployment.yaml
