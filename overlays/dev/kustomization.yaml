@@ -4,7 +4,6 @@ secretGenerator:
   - name: secret
     namespace: srtappinfra
     env: secret.properties
-
 resources:
   - ../../base
 
@@ -17,8 +16,8 @@ patchesJson6902:
 
 images:
   - name: jenkinspipeline12/srtinfra
-    newName: jenkinspipeline12/srtinfra
-    newTag: "v4"
+    newName: twilightitsolutions/srtinfra
+    newTag: "v1"
   - name: srtserver.azurecr.io/srtappgateway
     newName: srtserver.azurecr.io/srtappgateway
     newTag: "integration_10_dev"
