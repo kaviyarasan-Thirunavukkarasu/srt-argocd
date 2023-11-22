@@ -3,3 +3,4 @@
   value: #value we want to use for patching
     - secretRef:
         name: azure-kv-ext-secret
+        namespace: srtapp
