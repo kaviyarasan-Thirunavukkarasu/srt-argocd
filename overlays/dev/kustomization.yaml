@@ -14,7 +14,11 @@ patchesJson6902:
       kind: ExternalSecret
       name: dev-azure-kv-713-test
     path: externalsecrets-patch.yaml
-
+  - target:
+      version: v1beta1
+      kind: ExternalSecret
+      name: dev-azure-acr-secret
+    path: acrsecret-patch.yaml
 images:
   - name: jenkinspipeline12/srtinfra
     newName: twilightitsolutions/demo
