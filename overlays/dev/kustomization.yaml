@@ -12,12 +12,12 @@ patchesJson6902:
   - target:
       version: v1beta1 # apiVersion
       kind: ExternalSecret
-      name: dev-azure-kv-713-test
+      name: dev-azure-kv-713-test # Change this for new env
     path: externalsecrets-patch.yaml
   - target:
       version: v1beta1
       kind: ExternalSecret
-      name: dev-azure-acr-secret
+      name: dev-azure-acr-secret # Change this for new env
     path: acrsecret-patch.yaml
 images:
   - name: jenkinspipeline12/srtinfra
