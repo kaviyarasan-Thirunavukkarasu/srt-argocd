@@ -8,5 +8,5 @@ subjects:
     namespace: srt-appinfra-ns
 roleRef:
   kind: ClusterRole
-  name: cluster-admin
+  name: cluster-reader-and-creator
   apiGroup: rbac.authorization.k8s.io
