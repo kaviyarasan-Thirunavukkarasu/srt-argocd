@@ -7,8 +7,8 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/use-regex: "true"
-  name: srtappinfra-ingress
-  namespace: srtappinfra
+  name: srt-appinfra-ingress
+  namespace: srt-appinfra-ns
 spec:
   ingressClassName: nginx
   rules:
@@ -19,16 +19,16 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: srtinfrasvc
-                namespace: srtappinfra
+                name: srt-infraapi-svc
+                namespace: srt-appinfra-ns
                 port:
                   number: 8000
           - path: /srtapp(/|$)(.*)
             pathType: Prefix
             backend:
               service:
-                name: srtappsvc
-                namespace: srtappinfra
+                name: srt-appgateway-svc
+                namespace: srt-appinfra-ns
                 port:
                   number: 3000
   tls:

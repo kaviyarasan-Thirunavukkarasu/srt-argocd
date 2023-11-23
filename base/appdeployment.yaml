@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: srtappdep
-  namespace: srtappinfra
+  name: srt-appgateway-dep
+  namespace: srt-appinfra-ns
 spec:
   replicas: 1 # Set the number of desired replicas
   selector:
     matchLabels:
-      app: srtinfraginapp #app name
+      app: srt-appgateway
   template:
     metadata:
       labels:
-        app: srtinfraginapp # app name
+        app: srt-appgateway
     spec:
       containers:
-        - name: srtappcontainer
+        - name: srt-appgateway-container
           image: srtserver.azurecr.io/srtappgateway:integration_10_dev
           ports:
             - containerPort: 3000 # Set the port your application listens on
       imagePullSecrets:
         - name: acr-secret
-          namespace: srtappinfra
+          namespace: srt-appinfra-ns

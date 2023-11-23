@@ -2,18 +2,18 @@ namePrefix: dev-
 
 secretGenerator:
   - name: secret
-    namespace: srtappinfra
+    namespace: srt-appinfra-ns
     env: secret.properties
 
 resources:
   - ../../base
 
-patchesJson6902:
+patches:
   - target:
       version: v1 # apiVersion
       kind: Deployment
-      name: srtappinfradep
-    path: dep-patch.yaml
+      name: srt-infraapi-dep
+    path: infra-dep-patch.yaml
 
 images:
   - name: jenkinspipeline12/srtinfra

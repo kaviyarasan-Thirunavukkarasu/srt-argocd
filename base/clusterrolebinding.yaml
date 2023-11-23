@@ -5,7 +5,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: config-reader-sa
-    namespace: srtappinfra
+    namespace: srt-appinfra-ns
 roleRef:
   kind: ClusterRole
   name: cluster-admin

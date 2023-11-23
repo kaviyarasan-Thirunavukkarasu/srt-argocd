@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: srtappinfradep
-  namespace: srtappinfra
+  name: srt-infraapi-dep
+  namespace: srt-appinfra-ns
 spec:
-  replicas: 1 # Set the number of desired replicas
+  replicas: 1 
   selector:
     matchLabels:
-      app: srtinfragin #app name
+      app: srt-infraapi
   template:
     metadata:
       labels:
-        app: srtinfragin # app name
+        app: srt-infraapi
     spec:
       serviceAccountName: config-reader-sa
       containers:
-        - name: srtinfraapicontainer
+        - name: srt-infraapi-container
           image: jenkinspipeline12/srtinfra:v4
           ports:
             - containerPort: 8080 # Set the port your application listens on

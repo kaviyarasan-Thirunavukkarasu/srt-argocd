@@ -5,7 +5,7 @@ resources:
   # - externalsecrets.yaml
   - clusterrolebinding.yaml
   - secret.yaml
-  - deployment.yaml
+  - infradeployment.yaml
   - appdeployment.yaml
   - infraservice.yaml
   - appservice.yaml
