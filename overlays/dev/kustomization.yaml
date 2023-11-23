@@ -1,10 +1,5 @@
 namePrefix: dev-
 
-secretGenerator:
-  - name: secret
-    namespace: srt-appinfra-ns
-    env: secret.properties
-
 resources:
   - ../../base
 
@@ -14,11 +9,16 @@ patches:
       kind: Deployment
       name: srt-infraapi-dep
     path: infra-dep-patch.yaml
+  - target:
+      version: v1beta1 # apiVersion
+      kind: ExternalSecret
+      name: dev-azure-kv-713-test
+    path: externalsecrets-patch.yaml
 
 images:
   - name: jenkinspipeline12/srtinfra
-    newName: twilightitsolutions/srtinfra
-    newTag: "v4"
+    newName: twilightitsolutions/demo
+    newTag: "v2"
   - name: srtserver.azurecr.io/srtappgateway
     newName: srtserver.azurecr.io/srtappgateway
     newTag: "integration_10_dev"

@@ -2,8 +2,9 @@ resources:
   - namespace.yaml
   - serviceaccount.yaml
   - clusterrole.yaml
-  # - clustersecretstore.yaml
-  # - externalsecrets.yaml
+  - clustersecretstore.yaml
+  - externalsecrets.yaml
+  - acrexternalsecret.yaml
   - clusterrolebinding.yaml
   - secret.yaml
   - infradeployment.yaml
