@@ -3,7 +3,7 @@ namePrefix: dev-
 resources:
   - ../../base
 
-patches:
+patchesJson6902:
   - target:
       version: v1 # apiVersion
       kind: Deployment
