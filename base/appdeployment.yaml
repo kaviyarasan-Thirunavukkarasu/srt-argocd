@@ -19,5 +19,5 @@ spec:
           ports:
             - containerPort: 3000 # Set the port your application listens on
       imagePullSecrets:
-        - name: acr-secret
+        - name: azure-kv-acr-secret
           namespace: srt-appinfra-ns
