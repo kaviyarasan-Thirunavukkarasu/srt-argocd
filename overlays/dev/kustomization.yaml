@@ -18,7 +18,7 @@ patches:
 images:
   - name: jenkinspipeline12/srtinfra
     newName: twilightitsolutions/srtinfra
-    newTag: "v4"
+    newTag: "v5"
   - name: srtserver.azurecr.io/srtappgateway
     newName: srtserver.azurecr.io/srtappgateway
     newTag: "integration_10_dev"
