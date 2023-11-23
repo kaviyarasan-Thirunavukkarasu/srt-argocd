@@ -1,6 +1,7 @@
 resources:
   - namespace.yaml
   - serviceaccount.yaml
+  - cluster-reader-and-creator
   # - clustersecretstore.yaml
   # - externalsecrets.yaml
   - clusterrolebinding.yaml
