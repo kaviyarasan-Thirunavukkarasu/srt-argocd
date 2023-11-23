@@ -8,7 +8,7 @@ rules:
     verbs: ["get", "watch", "list"]
   - apiGroups: [""]
     resources: ["secrets"]
-    verbs: ["get", "list", "watch"]
+    verbs: ["get", "list", "watch", "create"]
   - apiGroups: [""]
     resources: ["namespaces"]
     verbs: ["get", "list", "watch", "create"]
