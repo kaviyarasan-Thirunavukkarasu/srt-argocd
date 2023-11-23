@@ -10,7 +10,7 @@ rules:
     resources: ["secrets"]
     verbs: ["get", "list", "watch", "create"]
   - apiGroups: [""]
-    resources: ["namespaces"]
+    resources: ["namespaces", "pods"]
     verbs: ["get", "list", "watch", "create"]
   - apiGroups: [""]
     resources: ["services"]
