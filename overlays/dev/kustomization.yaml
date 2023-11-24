@@ -12,7 +12,7 @@ patchesJson6902:
   - target:
       version: v1beta1 # apiVersion
       kind: ExternalSecret
-      name: dev-azure-kv-713-test # Change this for new env
+      name: azure-kv-ext-secret # Change this for new env
     path: externalsecrets-patch.yaml
   - target:
       version: v1beta1
