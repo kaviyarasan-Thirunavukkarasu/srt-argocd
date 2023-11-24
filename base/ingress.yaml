@@ -34,3 +34,5 @@ spec:
   #   - hosts:
   #       - devcluster.surgeonreview.net
   #     secretName: tlssecret
+
+# Add host to the file
