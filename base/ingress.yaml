@@ -12,8 +12,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: devcluster.surgeonreview.net
-      http:
+    - http:
         paths:
           - path: /srtinfra/(.*)
             pathType: Prefix
@@ -31,7 +30,7 @@ spec:
                 namespace: srt-appinfra-ns
                 port:
                   number: 3000
-  tls:
-    - hosts:
-        - devcluster.surgeonreview.net
-      secretName: tlssecret
+  # tls:
+  #   - hosts:
+  #       - devcluster.surgeonreview.net
+  #     secretName: tlssecret

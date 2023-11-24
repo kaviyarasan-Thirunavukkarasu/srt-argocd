@@ -22,7 +22,7 @@ patchesJson6902:
 images:
   - name: jenkinspipeline12/srtinfra
     newName: twilightitsolutions/srtinfra
-    newTag: "v5"
+    newTag: "v6"
   - name: srtserver.azurecr.io/srtappgateway
     newName: srtserver.azurecr.io/srtappgateway
     newTag: "integration_11_dev"
