@@ -21,8 +21,8 @@ patchesJson6902:
     path: acrsecret-patch.yaml
 images:
   - name: jenkinspipeline12/srtinfra
-    newName: twilightitsolutions/demo
-    newTag: "v2"
+    newName: twilightitsolutions/srtinfra
+    newTag: "v5"
   - name: srtserver.azurecr.io/srtappgateway
     newName: srtserver.azurecr.io/srtappgateway
     newTag: "integration_11_dev"
