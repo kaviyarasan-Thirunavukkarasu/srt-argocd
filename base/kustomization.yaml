@@ -6,7 +6,6 @@ resources:
   - externalsecrets.yaml
   - acrexternalsecret.yaml
   - clusterrolebinding.yaml
-  # - secret.yaml
   - infradeployment.yaml
   - appdeployment.yaml
   - infraservice.yaml
